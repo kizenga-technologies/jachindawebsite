@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -262,40 +263,9 @@ footer{background:#0b2239;color:#fff;text-align:center;padding:20px;}
 }
 
 /* RESPONSIVE */
-
-
-/*CONTACT SECTION ON MOBILE */
 @media(max-width:768px){
-
-    .contact-grid{
-        grid-template-columns:1fr !important; /* stack vertically */
-    }
-
-    .contact-grid > div,
-    .contact-grid form{
-        width:100%;
-    }
-
-    .contact-grid form{
-        margin-top:20px;
-    }
-
-    /* Prevent text cutting */
-    .contact-grid p{
-        word-wrap:break-word;
-        overflow-wrap:break-word;
-    }
-
-    /* Fix padding on container */
-    #contact.container{
-        padding:0 10px;
-    }
-
-}
-
-@media(max-width:768px){
-    .contact-grid{
-        padding:10px;
+    div[style*="grid-template-columns"]{
+        grid-template-columns:1fr !important;
     }
 }
 
@@ -734,7 +704,7 @@ window.addEventListener('scroll', () => {
 
 <div style="background:linear-gradient(135deg,#0b2239,#1a3c5a);padding:60px 20px;color:white;">
 
-<div class="contact-grid" style="max-width:1100px;margin:auto;display:grid;gap:40px;">
+<div class="contact-grid" style="max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;">
 
 <!-- LEFT -->
 <div>
@@ -742,7 +712,7 @@ window.addEventListener('scroll', () => {
 <p>Reach out to support or partner with us.</p>
 
 <p><i class="fas fa-map-marker-alt"></i> Iringa, Tanzania</p>
-<p><i class="fas fa-phone"></i> +255 654 845 360 / +255 766 340 397</p>
+<p><i class="fas fa-phone"></i> +255 654 845 360</p>
 <p><i class="fas fa-envelope"></i> jachinda.foundation2024@outlook.com</p>
 </div>
 
@@ -781,6 +751,8 @@ Send
 
 
 <script>
+function toggleMenu(){document.getElementById('sidebar').classList.toggle('active');}
+
 let slides=document.querySelectorAll('.slide');
 let index=0;
 setInterval(()=>{
@@ -805,12 +777,9 @@ document.getElementById('sidebar').classList.toggle('active');
 
 // AUTO CLOSE MENU
 document.querySelectorAll('.nav-link').forEach(link=>{
-    link.addEventListener('click',()=>{
-        // Close sidebar ONLY on small screens
-        if (window.innerWidth <= 768) {
-            document.getElementById('sidebar').classList.remove('active');
-        }
-    });
+link.addEventListener('click',()=>{
+document.getElementById('sidebar').classList.remove('active');
+});
 });
 </script>
 
