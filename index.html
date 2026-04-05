@@ -353,6 +353,47 @@ footer{background:#0b2239;color:#fff;text-align:center;padding:20px;}
         font-size:15px;
     }
 
+}   
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    font-size:26px;
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    z-index:999;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+    transform:scale(1.1);
+}  
+
+.wa-container{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    z-index:999;
+}
+
+.wa-text{
+    background:#fff;
+    padding:6px 10px;
+    border-radius:5px;
+    font-size:13px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
 }    
 
 </style>
@@ -870,6 +911,14 @@ document.getElementById('sidebar').classList.remove('active');
 });
 });
 </script>
+
+<div class="wa-container">
+    <a href="https://wa.me/255654845360?text=Hello%20Jachinda%20Foundation%2C%20I%20would%20like%20to%20support%20your%20mission"
+    class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <span class="wa-text">Chat with us</span>
+</div>   
 
 </body>
 </html>
