@@ -45,7 +45,7 @@ nav ul li a{color:#fff;text-decoration:none;}
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;   /* FULL SCREEN WIDTH */
+    width: 100%;   /* FULL SCREEN WIDTH */
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -302,6 +302,55 @@ footer{background:#0b2239;color:#fff;text-align:center;padding:20px;}
     /* Fix padding on container */
     #contact .container{
         padding:0 10px;
+    }
+
+} 
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* TABLET */
+@media(max-width:768px){
+    .contact-grid{
+        grid-template-columns:1fr;
+        padding:0 15px;
+    }
+}
+
+/* SMALL PHONES (INFINIX FIX) */
+@media(max-width:576px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        padding:0 10px;
+    }
+
+    .contact-grid form{
+        width:100%;
+        margin:0 auto;
+    }
+
+    .contact-grid > div{
+        width:100%;
+    }
+
+    /* TEXT RESIZE (BADALA YA KUCUT) */
+    .contact-grid p{
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    .contact-grid h2{
+        font-size:20px;
+    }
+
+    .contact-grid h3{
+        font-size:18px;
     }
 
 }    
@@ -743,7 +792,7 @@ window.addEventListener('scroll', () => {
 
 <div style="background:linear-gradient(135deg,#0b2239,#1a3c5a);padding:60px 20px;color:white;">
 
-<div class="contact-grid" style="max-width:1100px;margin:auto;display:grid;gap:40px;">
+<div class="contact-grid">
 
 <!-- LEFT -->
 <div>
